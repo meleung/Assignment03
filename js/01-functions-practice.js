@@ -52,6 +52,15 @@ function variableSum() {
     
     return sum;
 }
-inputArray = window.prompt("Enter a string of numbers to sum:");//.split(',');
-window.console.log(inputArray);
-variableSum(inputArray);
+var input = [], i;
+
+for (i = 0; i < 5; i += 1) {
+    input[i] = parseInt(window.prompt("Enter a string of numbers to sum:"), 10);
+}
+window.console.log(input);
+window.console.log(String(input[0]) + " + " +
+                   String(input[1]) + " + " +
+                   String(input[2]) + " + " +
+                   String(input[3]) + " + " +
+                   String(input[4]) + " = " +
+                   variableSum(input[0], input[1], input[2], input[3], input[4]));
